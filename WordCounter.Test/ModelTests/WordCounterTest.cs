@@ -12,14 +12,14 @@ namespace WordCounter.Test
     public void GetSentence_ReturnSentence_string()
     {
       //Arrange
-      string phrase = "x";
+      string phrase = "Hello Epicodus!";
       WordFinder newWordFinder = new WordFinder(phrase);
 
       //action
       string result = newWordFinder.GetSentence();
 
       //Assert
-      Assert.AreEqual("X is not equal to y", result);
+      Assert.AreEqual(phrase, result);
 
     }
   }
