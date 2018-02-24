@@ -19,7 +19,7 @@ namespace WordCounter.Test
       string result = newWordFinder.GetSentence();
 
       //Assert
-      Assert.AreEqual(phrase, result);
+      Assert.AreEqual("X is not equal to y", result);
 
     }
   }
