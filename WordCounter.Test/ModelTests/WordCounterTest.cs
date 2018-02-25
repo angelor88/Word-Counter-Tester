@@ -13,7 +13,7 @@ namespace WordCounter.Test
     {
       //Arrange
       string phrase = "Hello Epicodus!";
-      WordFinder newWordFinder = new WordFinder(phrase);
+      WordFinder newWordFinder = new WordFinder(phrase, "");
 
       //action
       string result = newWordFinder.GetSentence();
@@ -22,5 +22,29 @@ namespace WordCounter.Test
       Assert.AreEqual(phrase, result);
 
     }
+    [TestMethod]
+    public void CountKeyWord_ReturnKeyWordsInSentence()
+    {
+      //Arrange
+      string mySentence = "Hello from Seattle! Hello World!";
+      string myKeyWord = "hello";
+      WordFinder testTwo = new WordFinder(mySentence, myKeyWord);
+
+      //Action
+      int resultTwo = testTwo.GetCount();
+
+      //Assert
+      Assert.AreEqual(3, resultTwo);
+
+    }
+    // [TestMethod]
+    // public void CheckIfTheSentenceIsaNumber()
+    // {
+      //Arrange
+
+      //Action
+
+      //Assert
+    // }
   }
 }
