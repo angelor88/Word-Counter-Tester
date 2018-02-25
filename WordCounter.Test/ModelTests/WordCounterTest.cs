@@ -26,7 +26,7 @@ namespace WordCounter.Test
     public void CountKeyWord_ReturnKeyWordsInSentence()
     {
       //Arrange
-      string mySentence = "Hello from Seattle! Hello World!";
+      string mySentence = "Hello from Seattle! hello World!";
       string myKeyWord = "hello";
       WordFinder testTwo = new WordFinder(mySentence, myKeyWord);
 
@@ -34,7 +34,7 @@ namespace WordCounter.Test
       int resultTwo = testTwo.GetCount();
 
       //Assert
-      Assert.AreEqual(3, resultTwo);
+      Assert.AreEqual(2, resultTwo);
 
     }
     // [TestMethod]
