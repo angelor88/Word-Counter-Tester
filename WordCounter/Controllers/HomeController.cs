@@ -15,9 +15,10 @@ namespace WordCounter.Controllers
     [HttpPost("/howOften")]
     public ActionResult CounterResult()
     {
-      int counterResult = WordFinder.GetCount(Request.Form["your-sentence"], Request.Form["your-keyWord"]);
-
-        return View("PageResults", counterResult);
+      string sentenceResult = Request.Form[("your-sentence")];
+      string keyWordResult = Request.Form[("your-keyWord")];
+      WordFinder newWordFinder = new WordFinder(sentenceResult, keyWordResult);
+      return View("PageResults", newWordFinder);
     }
   }
 }
